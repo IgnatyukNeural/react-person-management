@@ -1,0 +1,15 @@
+.addPersonContainer {
+    background: #f4f4f4;
+    text-align: center;
+    padding-bottom: 10px;
+    border-radius: 1.5rem;
+}
+
+input {
+    margin-top: 10px;
+    width: 50%;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    border: none;
+    text-align: center;
+}

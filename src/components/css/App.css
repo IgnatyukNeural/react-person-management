@@ -1,0 +1,21 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width: 981px) {
+  .container {
+    width: 100%;
+  }
+}
