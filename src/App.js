@@ -9,6 +9,7 @@ class App extends Component {
     this.state = {
       people: [
         {
+          id: '1',
           firstName: 'Daniel',
           lastName: 'Ignatyuk',
           age: 18,
@@ -20,7 +21,11 @@ class App extends Component {
 
   addPerson = (person) => {
     console.log(person);
-    this.setState({people: [...this.state.people, person]})
+    this.setState({people: [...this.state.people, person]});
+  }
+
+  deletePerson = (id) => {
+    this.setState({people: [...this.state.people.filter(person => person.id !== id)]});
   }
 
   render() {
@@ -29,7 +34,7 @@ class App extends Component {
         <AddPerson addPerson={this.addPerson} />
         <div className="people">
           {this.state.people.map((person, index) => (
-            <Person person={person} key={index} index={index} />
+            <Person person={person} key={index} index={index} deletePerson={this.deletePerson} />
           ))}
         </div>
       </div>

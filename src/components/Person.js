@@ -20,9 +20,13 @@ class Person extends Component {
     }
 
     render() {
+        const { id } = this.props.person;
         return(
             <div className="person">
-                <p>{this.props.person.firstName} {this.props.person.lastName} <button onClick={this.toggleInfo} style={btnStyle}><i className="fas fa-caret-down"></i></button></p>
+                <p>{this.props.person.firstName} {this.props.person.lastName} 
+                    <button onClick={this.toggleInfo} style={btnStyle}><i className="fas fa-caret-down"></i></button>
+                    <button onClick={this.props.deletePerson.bind(this, id)} style={btnStyle}><i className="fas fa-trash"></i></button>
+                </p>
                 <div className="person-info" style={this.personInfo()}>
                     <p>Age: {this.props.person.age}</p>
                     <p>Info: {this.props.person.info}</p>
